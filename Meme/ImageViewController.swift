@@ -19,6 +19,7 @@ class ImageViewController: UIViewController{
         self.tabBarController?.tabBar.hidden = true
         
         viewImage.image = memes.memedImage
+        viewImage.contentMode = .ScaleAspectFit
     }
     
     override func viewWillDisappear(animated: Bool) {

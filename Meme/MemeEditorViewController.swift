@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  Meme
 //
 //  Created by Ahmed Shehata on 7/15/16.

@@ -21,20 +21,23 @@ class collectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let space: CGFloat = 3.0
+        let space: CGFloat = 1.0
         let dimension1 = (view.frame.size.width - (2 * space)) / 3.0
         let dimension2 = (view.frame.size.height - (2 * space)) / 3.0
         
         flowLayOut.minimumLineSpacing = space
         flowLayOut.minimumInteritemSpacing = space
         flowLayOut.itemSize = CGSizeMake(dimension1, dimension2)
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView?.reloadData()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return memes.count
-        
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
